@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html>
-
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
 <body style="font-family: Helvetica, Noto sans, sans-serif; background-color: #90d7c9; background-image: url(https://i.pinimg.com/originals/58/ba/c1/58bac105023807b01f932ce6363568cc.jpg); background-size: cover; ">
     <div style="position: absolute; width: 100%; display: flex; backdrop-filter: blur(10px); background-color: rgba(0, 0, 0, 0.25); color: #fff; justify-content: space-between;">
-        <p style="margin-left: 16px;">
+        <p style="margin-left: 16px; font-weight: 700; background-color: rgba(256, 256, 256, 0.125); padding: 4px 12px; border-radius: 16px;">
             AnshOS
-        </p>
-        <p style="margin-right: 16px;">
+        </p>    
+        <p style="margin-right: 16px; background-color: rgba(256, 256, 256, 0.125); padding: 4px 12px; border-radius: 16px;" id="timeElement">
             29/06/2024 10:01 PM            
         </p>
     </div>
-    <div style="background-color: white; border: solid; width: 512px; border-radius: 16px; padding: 16px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <div id ="welcome" style="background-color: white; border: solid; width: 512px; border-radius: 16px; padding: 16px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); cursor: move;">
+        <div id="welcomeheader"
+      style="width: 100%; display: flex; align-items: center; cursor: grab; justify-content: space-between; margin-top: 8px;">
+            <div id="welcomeclose" style="width: 16px; height: 16px; cursor: pointer; background-color: #EC6B5E; border-radius: 16px; border: solid 1px rgba(0, 0, 0, 0.25); margin-left: 6px;"></div>
+
+      <p style="margin: 0px; color: #fff; font-weight: 500">Welcome</p>
+      <div style="width: 16px; margin-right: 6x; height: 16px;"></div>
+    </div>
         <h1 style="margin: 4px;">Ansh OS</h1>
         <p>Hello world!</p>
         <img style="width: 64px; object-fit: cover;" src="Tux.svg.png">
         <a href="https://www.instagram.com/__ansh.ssh"></a>
         <p>AnshOS is a personal web based os designed by <a href="https://github.com/ansh3108/">Me</a></p>
     </div>
+    <script>
+        setInterval(function () {
+            document.querySelector("#timeElement").innerHTML = new Date().toLocaleString();
+        }, 1000);
+    </script>
+    <script src="script.js"></script>
 </body>   
-
 </html>
